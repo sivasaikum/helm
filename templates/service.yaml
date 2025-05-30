@@ -4,7 +4,7 @@ metadata:
   name: nginx
 spec:
   type: LoadBalancer
-  labels:
+  selector:
     component: backend
     environment: prod
   ports:
