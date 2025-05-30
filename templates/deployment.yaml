@@ -17,8 +17,9 @@ spec:
       labels:
         component: backend
         environment: prod
-    containers:
-    - name: nginx
-      image: nginx:{{ .Values.deployment.imageVersion }} # image verssion will change
-      ports:
-      - containerPort: 80
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:{{ .Values.deployment.imageVersion }} # image verssion will change
+        ports:
+        - containerPort: 80
